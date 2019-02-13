@@ -1,0 +1,7 @@
+<a href="javascipt:void(0);" (click)="logout()">Logout</a>
+
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<ul>
+  <li *ngFor="let user of users">{{ user.username }} {{ user.role }}</li>
+</ul>

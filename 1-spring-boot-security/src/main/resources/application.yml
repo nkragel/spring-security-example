@@ -1,0 +1,6 @@
+server:
+  port: 8087
+
+management:
+  security:
+    enabled: false

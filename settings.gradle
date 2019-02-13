@@ -1,0 +1,4 @@
+rootProject.name='spring-security-lesson'
+
+include '1-spring-boot-security'
+include '2-spring-boot-jwt'

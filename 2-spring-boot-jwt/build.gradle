@@ -1,0 +1,32 @@
+version '0.0.1-SNAPSHOT'
+
+buildscript {
+    ext {
+        springBootVersion = '2.1.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+ext {
+    guava = '20.0'
+    commons = '3.5'
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.security:spring-security-jwt:1.0.10.RELEASE")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    implementation("com.google.guava:guava:$guava")
+    implementation("org.apache.commons:commons-lang3:$commons")
+
+    implementation("com.h2database:h2")
+}
