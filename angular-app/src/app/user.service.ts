@@ -9,11 +9,11 @@ export class UserService {
   constructor(private authHttp: AuthHttp) { }
 
   findAll() {
-    return this.authHttp.get(`${environment.serverUrl}/users`).map(res => res.json());
+    return this.authHttp.get(`${environment.serverUrl}users`).map(res => res.json());
   }
 
   findOne(id: number) {
-    return this.authHttp.get(`${environment.serverUrl}/users/${id}`).map(res => res.json());
+    return this.authHttp.get(`${environment.serverUrl}users/${id}`).map(res => res.json());
   }
 
 }
